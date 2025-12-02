@@ -29,28 +29,28 @@ pipeline {
         stage('Docker build') {
             steps {
                 script {
-                    bat '"C:\Program Files\Docker\Docker\resources\bin\docker.exe" build -f Dockerfile -t aravindchandra/px:local .'
+                    bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" build -f Dockerfile -t aravindchandra/px:local .'
                 }
             }
         }
         stage('List the images') {
             steps {
                 script {
-                    bat '"C:\Program Files\Docker\Docker\resources\bin\docker.exe" images'
+                    bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" images'
                 }
             }
         }
         stage('Tag the image') {
             steps {
                 script {
-                    bat '"C:\Program Files\Docker\Docker\resources\bin\docker.exe" tag aravindchandra/px:local aravindchandra/px:latest'
+                    bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" tag aravindchandra/px:local aravindchandra/px:latest'
                 }
             }
         }
         stage('Save output to File') {
             steps {
                 script {
-                    bat '"C:\Program Files\Docker\Docker\resources\bin\docker.exe" run aravindchandra/px:latest > docker_output.txt'
+                    bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" run aravindchandra/px:latest > docker_output.txt'
                 }
             }
         }
