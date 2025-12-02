@@ -8,21 +8,21 @@ pipeline {
         stage('Check Python Version') {
             steps {
                 script {
-                    bat 'python3 --version'
+                    bat 'python --version'
                 }
             }
         }
         stage('Run Addition Script') {
             steps {
                 script {
-                    bat 'python3 addition.py'
+                    bat 'python addition.py'
                 }
             }
         }
         stage('Save output to File') {
             steps {
                 script {
-                    bat 'python3 addition.py > output.txt'
+                    bat 'python addition.py > output.txt'
                 }
             }
         }
