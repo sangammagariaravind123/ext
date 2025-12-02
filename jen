@@ -8,21 +8,21 @@ pipeline {
         stage('Check Python Version') {
             steps {
                 script {
-                    bat 'python --version'
+                    bat '"C:/Users/sanga/AppData/Local/Programs/Python/Python311/python.exe" --version'
                 }
             }
         }
         stage('Run Addition Script') {
             steps {
                 script {
-                    bat 'python addition.py'
+                    bat '"C:/Users/sanga/AppData/Local/Programs/Python/Python311/python.exe" addition.py'
                 }
             }
         }
         stage('Save output to File') {
             steps {
                 script {
-                    bat 'python addition.py > output.txt'
+                    bat '"C:/Users/sanga/AppData/Local/Programs/Python/Python311/python.exe" addition.py > output.txt'
                 }
             }
         }
