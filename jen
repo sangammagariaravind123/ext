@@ -47,7 +47,7 @@ pipeline {
                 }
             }
         }
-        stage('Save output to File') {
+        stage('Save docker output to File') {
             steps {
                 script {
                     bat '"C:/Program Files/Docker/Docker/resources/bin/docker.exe" run aravindchandra/px:latest > docker_output.txt'
