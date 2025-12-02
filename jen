@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Check Python Version') {
+            steps {
+                script {
+                    bat 'python --version'
+                }
+            }
+        }
+        stage('Run Addition Script') {
+            steps {
+                script {
+                    bat 'python addition.py'
+                }
+            }
+        }
+        stage('Save output to File') {
+            steps {
+                script {
+                    bat 'python addition.py > output.txt'
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'Pipeline execution completed'
+        }
+    }
+}
