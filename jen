@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PYTHON_HOME = 'C:\Users\sanga\AppData\Local\Programs\Python\Python311\python.exe'
+        PYTHON_HOME = 'C:/Users/sanga/AppData/Local/Programs/Python/Python311/python.exe'
         PATH = "${PYTHON_HOME};${env.PATH}"
     }
     stages {
